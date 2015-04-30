@@ -43,8 +43,8 @@
                   <block type="led_select" id="150" inline="true">
                     <field name="ACTION">OFF</field>
                     <value name="LED">
-                      <block type="math_number" id="151">
-                        <field name="NUM">1</field>
+                      <block type="variables_get" id="213">
+                        <field name="VAR">LIGHT</field>
                       </block>
                     </value>
                     <next>
@@ -66,7 +66,7 @@
                                   </block>
                                 </value>
                                 <value name="B">
-                                  <block type="math_number" id="132">
+                                  <block type="math_number" id="151">
                                     <field name="NUM">1</field>
                                   </block>
                                 </value>
