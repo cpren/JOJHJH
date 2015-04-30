@@ -1,6 +1,10 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="229" inline="false" x="-33" y="-104">
-    <field name="MODE">WHILE</field>
+  <block type="controls_repeat" id="283" inline="true" x="22" y="45">
+    <value name="TIMES">
+      <block type="math_number" id="290">
+        <field name="NUM">9999</field>
+      </block>
+    </value>
     <statement name="DO">
       <block type="led_select" id="170" inline="true">
         <field name="ACTION">ON</field>
