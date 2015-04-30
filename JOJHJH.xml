@@ -7,7 +7,7 @@
       </block>
     </value>
     <next>
-      <block type="controls_whileUntil" id="1" inline="false">
+      <block type="controls_whileUntil" id="243" inline="false">
         <field name="MODE">WHILE</field>
         <value name="NUMBER">
           <block type="logic_compare" id="2" inline="true">
@@ -25,71 +25,58 @@
           </block>
         </value>
         <statement name="DO">
-          <block type="controls_repeat" id="223" inline="true">
-            <value name="TIMES">
-              <block type="math_number" id="230">
-                <field name="NUM">5000</field>
+          <block type="led_select" id="252" inline="true">
+            <field name="ACTION">ON</field>
+            <value name="LED">
+              <block type="variables_get" id="253">
+                <field name="VAR">LIGHT</field>
               </block>
             </value>
-            <statement name="DO">
-              <block type="led_select" id="125" inline="true">
-                <field name="ACTION">ON</field>
-                <value name="LED">
-                  <block type="variables_get" id="169">
-                    <field name="VAR">LIGHT</field>
+            <next>
+              <block type="robot_delay" id="256" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="257">
+                    <field name="NUM">1000</field>
                   </block>
                 </value>
                 <next>
-                  <block type="robot_delay" id="134" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="141">
-                        <field name="NUM">1000</field>
+                  <block type="led_select" id="254" inline="true">
+                    <field name="ACTION">OFF</field>
+                    <value name="LED">
+                      <block type="variables_get" id="255">
+                        <field name="VAR">LIGHT</field>
                       </block>
                     </value>
                     <next>
-                      <block type="led_select" id="150" inline="true">
-                        <field name="ACTION">OFF</field>
-                        <value name="LED">
-                          <block type="variables_get" id="213">
-                            <field name="VAR">LIGHT</field>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="robot_delay" id="152" inline="true">
-                            <value name="DELAY">
-                              <block type="math_number" id="153">
-                                <field name="NUM">1000</field>
+                      <block type="variables_set" id="258" inline="true">
+                        <field name="VAR">LIGHT</field>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" id="266" inline="true">
+                            <field name="OP">ADD</field>
+                            <value name="A">
+                              <block type="variables_get" id="267">
+                                <field name="VAR">LIGHT</field>
                               </block>
                             </value>
-                            <next>
-                              <block type="variables_set" id="173" inline="true">
-                                <field name="VAR">LIGHT</field>
-                                <value name="VALUE">
-                                  <block type="math_arithmetic" id="190" inline="true">
-                                    <field name="OP">ADD</field>
-                                    <value name="A">
-                                      <block type="variables_get" id="177">
-                                        <field name="VAR">LIGHT</field>
-                                      </block>
-                                    </value>
-                                    <value name="B">
-                                      <block type="math_number" id="151">
-                                        <field name="NUM">1</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </value>
+                            <value name="B">
+                              <block type="math_number" id="268">
+                                <field name="NUM">1</field>
                               </block>
-                            </next>
+                            </value>
                           </block>
-                        </next>
+                        </value>
                       </block>
                     </next>
                   </block>
                 </next>
               </block>
-            </statement>
-            <next>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_whileUntil" id="1" inline="false">
+            <field name="MODE">WHILE</field>
+            <statement name="DO">
               <block type="oled_cleardisplay" id="3">
                 <next>
                   <block type="oled_setcursor" id="4" inline="true">
@@ -146,9 +133,9 @@
                   </block>
                 </next>
               </block>
-            </next>
+            </statement>
           </block>
-        </statement>
+        </next>
       </block>
     </next>
   </block>
