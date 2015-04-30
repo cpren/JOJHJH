@@ -11,7 +11,7 @@
         <field name="MODE">WHILE</field>
         <value name="NUMBER">
           <block type="logic_compare" id="2" inline="true">
-            <field name="OP">LT</field>
+            <field name="OP">EQ</field>
             <value name="A">
               <block type="variables_get" id="202">
                 <field name="VAR">LIGHT</field>
