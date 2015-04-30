@@ -6,33 +6,23 @@
       </block>
     </value>
     <statement name="DO">
-      <block type="led_select" id="170" inline="true">
-        <field name="ACTION">ON</field>
-        <value name="LED">
-          <block type="math_number" id="236">
-            <field name="NUM">6</field>
-          </block>
-        </value>
+      <block type="movement_forward" id="110">
         <next>
-          <block type="movement_forward" id="110">
+          <block type="robot_delay" id="118" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="131">
+                <field name="NUM">1000</field>
+              </block>
+            </value>
             <next>
-              <block type="robot_delay" id="118" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="131">
-                    <field name="NUM">1000</field>
-                  </block>
-                </value>
+              <block type="movement_reverse" id="142">
                 <next>
-                  <block type="movement_reverse" id="142">
-                    <next>
-                      <block type="robot_delay" id="144" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="151">
-                            <field name="NUM">1000</field>
-                          </block>
-                        </value>
+                  <block type="robot_delay" id="144" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="151">
+                        <field name="NUM">1000</field>
                       </block>
-                    </next>
+                    </value>
                   </block>
                 </next>
               </block>
