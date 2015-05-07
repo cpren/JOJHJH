@@ -107,7 +107,7 @@
                                 </value>
                                 <next>
                                   <block type="oled_drawtext" id="21">
-                                    <field name="TEXT">HAHAHAHAHAHAHAHADIIIIIIIEEEEEEEEEEE</field>
+                                    <field name="TEXT">you got tricked son</field>
                                     <next>
                                       <block type="controls_repeat" id="22" inline="true">
                                         <value name="TIMES">
