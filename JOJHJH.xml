@@ -120,7 +120,7 @@
                                           <block type="robot_delay" id="484" inline="true">
                                             <value name="DELAY">
                                               <block type="math_number" id="508">
-                                                <field name="NUM">1000</field>
+                                                <field name="NUM">2000</field>
                                               </block>
                                             </value>
                                             <next>
@@ -221,9 +221,6 @@
                                                                                                 </next>
                                                                                               </block>
                                                                                             </statement>
-                                                                                            <next>
-                                                                                              <block type="oled_cleardisplay" id="569"></block>
-                                                                                            </next>
                                                                                           </block>
                                                                                         </next>
                                                                                       </block>
