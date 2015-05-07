@@ -74,76 +74,81 @@
           </block>
         </statement>
         <next>
-          <block type="oled_cleardisplay" id="157">
-            <next>
-              <block type="oled_setcursor" id="184" inline="true">
-                <value name="STARTX">
-                  <block type="math_number" id="191">
-                    <field name="NUM">10</field>
-                  </block>
-                </value>
-                <value name="STARTY">
-                  <block type="math_number" id="201">
-                    <field name="NUM">10</field>
-                  </block>
-                </value>
+          <block type="controls_whileUntil" id="256" inline="false">
+            <field name="MODE">WHILE</field>
+            <statement name="DO">
+              <block type="oled_cleardisplay" id="157">
                 <next>
-                  <block type="oled_cleardisplay" id="17">
+                  <block type="oled_setcursor" id="184" inline="true">
+                    <value name="STARTX">
+                      <block type="math_number" id="191">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
+                    <value name="STARTY">
+                      <block type="math_number" id="201">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
                     <next>
                       <block type="oled_drawtext" id="210">
                         <field name="TEXT">surprise in 3</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="oled_cleardisplay" id="17">
+                <next>
+                  <block type="oled_setcursor" id="18" inline="true">
+                    <value name="STARTX">
+                      <block type="math_number" id="19">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
+                    <value name="STARTY">
+                      <block type="math_number" id="20">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="oled_drawtext" id="21">
+                        <field name="TEXT">you got tricked son</field>
                         <next>
-                          <block type="oled_setcursor" id="18" inline="true">
-                            <value name="STARTX">
-                              <block type="math_number" id="19">
-                                <field name="NUM">10</field>
+                          <block type="controls_repeat" id="22" inline="true">
+                            <value name="TIMES">
+                              <block type="math_number" id="23">
+                                <field name="NUM">9999</field>
                               </block>
                             </value>
-                            <value name="STARTY">
-                              <block type="math_number" id="20">
-                                <field name="NUM">10</field>
-                              </block>
-                            </value>
-                            <next>
-                              <block type="oled_drawtext" id="21">
-                                <field name="TEXT">you got tricked son</field>
+                            <statement name="DO">
+                              <block type="movement_forward" id="24">
                                 <next>
-                                  <block type="controls_repeat" id="22" inline="true">
-                                    <value name="TIMES">
-                                      <block type="math_number" id="23">
-                                        <field name="NUM">9999</field>
+                                  <block type="robot_delay" id="25" inline="true">
+                                    <value name="DELAY">
+                                      <block type="math_number" id="26">
+                                        <field name="NUM">100</field>
                                       </block>
                                     </value>
-                                    <statement name="DO">
-                                      <block type="movement_forward" id="24">
+                                    <next>
+                                      <block type="movement_reverse" id="27">
                                         <next>
-                                          <block type="robot_delay" id="25" inline="true">
+                                          <block type="robot_delay" id="28" inline="true">
                                             <value name="DELAY">
-                                              <block type="math_number" id="26">
+                                              <block type="math_number" id="29">
                                                 <field name="NUM">100</field>
                                               </block>
                                             </value>
-                                            <next>
-                                              <block type="movement_reverse" id="27">
-                                                <next>
-                                                  <block type="robot_delay" id="28" inline="true">
-                                                    <value name="DELAY">
-                                                      <block type="math_number" id="29">
-                                                        <field name="NUM">100</field>
-                                                      </block>
-                                                    </value>
-                                                  </block>
-                                                </next>
-                                              </block>
-                                            </next>
                                           </block>
                                         </next>
                                       </block>
-                                    </statement>
+                                    </next>
                                   </block>
                                 </next>
                               </block>
-                            </next>
+                            </statement>
                           </block>
                         </next>
                       </block>
